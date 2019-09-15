@@ -1,4 +1,4 @@
-package task2;
+package ru.ganiev.task3;
 
 import java.util.Scanner;
 
@@ -24,19 +24,20 @@ public class GameGuessNumber {
                 break;
             }
 
-            if (enteredNumber == 0) {
-                break;
+            if ((enteredNumber < 1 || enteredNumber > 100) && enteredNumber !=0) {
+                System.out.println("Вы ввели неверное значение!");
             }
 
             prevNumber = thisNumber;
             thisNumber = Math.abs(randomNumber - enteredNumber);
 
-            if (prevNumber >= thisNumber) {
+            if (prevNumber >= thisNumber && enteredNumber >= 1 && enteredNumber <= 100) {
                 System.out.println("Горячо");
-            } else {
+            } else { if (enteredNumber >= 1 && enteredNumber <= 100)
                 System.out.println("Холодно");
             }
 
-        } while (enteredNumber != 0);
+        } while (enteredNumber != 0 );
+
     }
 }

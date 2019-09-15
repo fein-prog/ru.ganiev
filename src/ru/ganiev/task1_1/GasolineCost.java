@@ -1,4 +1,4 @@
-package task1_1;
+package ru.ganiev.task1_1;
 
 import java.util.Scanner;
 

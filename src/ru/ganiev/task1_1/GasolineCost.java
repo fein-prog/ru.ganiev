@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class GasolineCost {
 
     public static void main (String[] args) {
-        byte a = 43; //цена/
-        float c;
+        byte price = 43;
+        float cost;
         Scanner in = new Scanner(System.in);
         System.out.print("Number of liters: ");
-        float b = in.nextFloat(); //количество литров/
-        c = a*b; //стоимость/
+        float quantity = in.nextFloat();
+        cost = price * quantity;
 
-        System.out.printf("Gasoline cost: " + c);
+        System.out.printf("Gasoline cost: " + cost);
     }
 }

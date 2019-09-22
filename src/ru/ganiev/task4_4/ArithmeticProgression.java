@@ -6,7 +6,7 @@ public class ArithmeticProgression {
 
     public static void main(String[] args) {
 
-  /*      Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число для арифметической прогрессии:");
         int enteredNumber = scanner.nextInt();
 
@@ -16,14 +16,9 @@ public class ArithmeticProgression {
             sum += i;
         }
             System.out.println("Арифметическая прогрессия для числа " + enteredNumber + " равна: " + sum);
-*/
 
-        int i = -1;
-        do {
-            i = i - 1;
 
-        } while (i > 0);
-        System.out.println(i);
+
     }
 }
 

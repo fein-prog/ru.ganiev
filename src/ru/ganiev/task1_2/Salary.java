@@ -3,16 +3,15 @@ package ru.ganiev.task1_2;
 import java.util.Scanner;
 
 public class Salary {
-    private byte d;
 
     public static void main (String[] args) {
-        byte d = 13; //налог 13%/
-        float e;
+        byte ndfl = 13;
+        float totalSalary;
         Scanner in = new Scanner(System.in);
         System.out.print("Dirty salary: ");
-        float f = in.nextFloat(); //Зарплата без вычета налога/
-        e = f*(100-13)/100; //Зарплата полученная на руки/
+        float dirtySalary = in.nextFloat();
+        totalSalary = dirtySalary * (100 - ndfl) / 100;
 
-        System.out.printf("To payment: " + e);
+        System.out.printf("To payment: " + totalSalary);
     }
 }

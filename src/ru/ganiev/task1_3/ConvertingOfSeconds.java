@@ -4,17 +4,15 @@ import java.util.Scanner;
 
 public class ConvertingOfSeconds {
 
-    private byte d;
-
     public static void main(String[] args) {
-        int d = 3600; //количество секунд в 1 часе/
-        float e;
+        int numberOfSeconds = 3600;
+        float numberOfHours;
         Scanner in = new Scanner(System.in);
         System.out.print("Enter seconds: ");
-        float f = in.nextFloat(); //количество секунд/
-        e = f / d; //Количество часов/
+        float enterSeconds = in.nextFloat();
+        numberOfHours = enterSeconds / numberOfSeconds;
 
-        System.out.printf("Number of hours in a second: " + e);
+        System.out.printf("Number of hours in a second: " + numberOfHours);
     }
 
 }

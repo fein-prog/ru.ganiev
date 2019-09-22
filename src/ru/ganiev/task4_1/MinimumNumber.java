@@ -11,11 +11,11 @@ public class MinimumNumber {
         System.out.println("Введите число №2:");
         int enteredNumber2 = scanner.nextInt();
 
-        if (enteredNumber1 < enteredNumber2 && enteredNumber1 != enteredNumber2) {
+        if (enteredNumber1 < enteredNumber2) {
             System.out.println("Число №1 мельне числа №2");
         }
 
-        if (enteredNumber1 > enteredNumber2 && enteredNumber1 != enteredNumber2) {
+        if (enteredNumber1 > enteredNumber2) {
             System.out.println("Число №2 мельне числа №1");
         }
 

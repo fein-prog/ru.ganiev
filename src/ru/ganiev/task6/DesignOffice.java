@@ -2,9 +2,9 @@ package ru.ganiev.task6;
 
 //Конструкторское бюро является потомком инженерного центра - Принцип НАСЛЕДОВАНИЕ
 class DesignOffice extends EngineeringDepartment {
-    int salary;
-    int numberOfIngeneers;
-    int coefImpPlan;
+    private int salary;
+    private int numberOfIngeneers;
+    private int coefImpPlan;
 
     DesignOffice(int salary, int numberOfIngeneers, int coefImpPlan, int wageFund) {
         super(wageFund);
@@ -15,6 +15,6 @@ class DesignOffice extends EngineeringDepartment {
 
     @Override
     int getWageFund() {
-        return salary * numberOfIngeneers * coefImpPlan;
+        return salary * numberOfIngeneers * coefImpPlan * super.getWageFund();
     }
 }

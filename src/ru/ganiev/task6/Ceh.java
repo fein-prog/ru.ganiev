@@ -1,14 +1,19 @@
 package ru.ganiev.task6;
 
-  public class Ceh {
-    int revenue;
-    int quantityOfDetails;
-    int price;
+class Ceh {
+    private int quantityOfDetails;
+    private int price;
 
-     void setRevenue(int price, int quantityOfDetails) {
-         this.quantityOfDetails = quantityOfDetails;
-         this.price = price;
-         revenue = price * quantityOfDetails;
-     }
+    Ceh(int price, int quantityOfDetails) {
+        this.price = price;
+        this.quantityOfDetails = quantityOfDetails;
+    }
 
- }
+    int getQuantityOfDetails() {
+        return quantityOfDetails;
+    }
+
+    int getPrice() {
+        return price;
+    }
+}

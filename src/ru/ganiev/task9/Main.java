@@ -22,15 +22,15 @@ public class Main {
 
         System.out.println("Пес: " + dogName + " " + dogAge + "года");
 
-        Horse horse = new Horse("Мустанг", 3) {
+        Duck duck = new Duck("Мустанг", 3) {
             @Override
             public void getName(String name, int age) {
             }
         };
-        String horseName = horse.getName();
-        int horseAge = horse.getAge();
+        String duckName = duck.getName();
+        int duckAge = duck.getAge();
 
-        System.out.println("Пес: " + dogName + " " + dogAge + "года");
+        System.out.println("Утка: " + duckName + " " + duckAge + "года");
 
 
 

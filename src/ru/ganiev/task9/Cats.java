@@ -1,6 +1,6 @@
 package ru.ganiev.task9;
 
-abstract class Cats extends Animal {
+abstract class Cats extends Animal implements Run {
 
 
     public Cats(String name, int age) {
@@ -22,7 +22,5 @@ abstract class Cats extends Animal {
     public void setAge(int age) {
         this.age = age;
     }
-
-
 
 }

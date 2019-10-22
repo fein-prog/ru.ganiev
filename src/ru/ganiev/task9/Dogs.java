@@ -1,6 +1,6 @@
 package ru.ganiev.task9;
 
-abstract class Dogs extends Animal {
+abstract class Dogs extends Animal implements Run {
 
     public Dogs(String name, int age) {
         super(name, age);

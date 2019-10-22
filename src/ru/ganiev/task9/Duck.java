@@ -1,9 +1,13 @@
 package ru.ganiev.task9;
 
-abstract class Horse extends Animal {
+abstract class Duck extends Animal implements Run,Fly,Swim {
 
-    public Horse(String name, int age) {
+    public Duck(String name, int age) {
         super(name, age);
+    }
+
+    public Duck() {
+        super("Мустанг", 5);
     }
 
     public String getName() {
@@ -21,4 +25,7 @@ abstract class Horse extends Animal {
     public void setAge(int age) {
         this.age = age;
     }
+
+   public void f
+
 }

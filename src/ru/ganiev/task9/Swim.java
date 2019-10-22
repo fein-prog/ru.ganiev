@@ -2,7 +2,7 @@ package ru.ganiev.task9;
 
 public interface Swim {
 
-    static void method () {
+    static void methodSwim () {
         System.out.println("Плавает");
     }
 }

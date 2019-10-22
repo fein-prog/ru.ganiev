@@ -1,7 +1,7 @@
 package ru.ganiev.task9;
 
 public interface Fly {
-    static void method () {
+    static void methodFly () {
         System.out.println("Летает");
     }
 

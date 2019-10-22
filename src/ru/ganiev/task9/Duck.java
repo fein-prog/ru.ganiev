@@ -26,6 +26,10 @@ abstract class Duck extends Animal implements Run,Fly,Swim {
         this.age = age;
     }
 
-   public void f
+    private Duck duck = new Duck() {
+        @Override
+        public void m
+    }
+
 
 }

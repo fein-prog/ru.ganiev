@@ -1,35 +1,36 @@
 package ru.ganiev.task9;
 
-abstract class Duck extends Animal implements Run,Fly,Swim {
+public class Duck extends Animal implements Run,Fly,Swim {
+
+    String name;
+    int age;
 
     public Duck(String name, int age) {
-        super(name, age);
-    }
-
-    public Duck() {
-        super("Мустанг", 5);
-    }
-
-    public String getName() {
-        return getName();
-    }
-
-    public void setName(String model) {
         this.name = name;
-    }
-
-    public int getAge() {
-        return getAge();
-    }
-
-    public void setAge(int age) {
         this.age = age;
     }
 
-    private Duck duck = new Duck() {
-        @Override
-        public void m
+    @Override
+    public String getName() {
+        return this.name;
     }
 
+    public int getAge() {
+        return age;
+    }
 
+    @Override
+    public void fly() {
+        System.out.println("Утка " + getName() + " летает");
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Утка " + getName() + " бегает");
+    }
+
+    @Override
+    public void swim() {
+        System.out.println("Утка " + getName() + " плавает");
+    }
 }

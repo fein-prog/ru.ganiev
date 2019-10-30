@@ -2,37 +2,36 @@ package ru.ganiev.task9;
 
 public class Main {
     public static void main(String[] args) {
-        Cats cat = new Cats("Пушистик", 2) {
-            @Override
-            public void getName(String name, int age) {
-            }
-        };
+        Cats cat = new Cats("Пушистик", 2);
         String catName = cat.getName();
-        int catAge = cat.getAge();
+        int catAge = ((Cats)cat).getAge();
+        System.out.println("Кот: " + catName + " " + catAge + " года");
+        cat.run();
 
-        System.out.println("Кот: " + catName + " " + catAge + "года");
-
-        Dogs dog = new Dogs("Шарик", 4) {
-            @Override
-            public void getName(String name, int age) {
-            }
-        };
+        Dogs dog = new Dogs("Шарик", 4);
         String dogName = dog.getName();
         int dogAge = dog.getAge();
+        System.out.println("Пес: " + dogName + " " + dogAge + " года");
+        dog.run();
 
-        System.out.println("Пес: " + dogName + " " + dogAge + "года");
-
-        Duck duck = new Duck("Мустанг", 3) {
-            @Override
-            public void getName(String name, int age) {
-            }
-        };
+        Duck duck = new Duck("Кряква", 3);
         String duckName = duck.getName();
         int duckAge = duck.getAge();
+        System.out.println("Утка: " + duckName + " " + duckAge + " года");
+        duck.fly();
+        duck.run();
+        duck.swim();
 
-        System.out.println("Утка: " + duckName + " " + duckAge + "года");
+        Athlete athlete = new Athlete("Рифат", 25);
+        String athletName = athlete.getName();
+        int athletekAge = athlete.getAge();
+        athlete.run();
+        athlete.swim();
 
-
+        Diver diver = new Diver("Зульфат", 30);
+        String divertName = diver.getName();
+        int diverkAge = diver.getAge();
+        diver.swim();
 
     }
 }

@@ -1,11 +1,11 @@
 package ru.ganiev.task9;
 
-public class Cats extends Animal implements Run {
+public class Diver extends Person{
 
     String name;
     int age;
 
-    public Cats(String name, int age) {
+    public Diver(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -25,9 +25,13 @@ public class Cats extends Animal implements Run {
     public void setAge(int age) {
         this.age = age;
     }
+    @Override
+    public void swim() {
+        System.out.println("Дайвер по имени " +  getName() + " плавает очень быстро");
+    }
 
     @Override
     public void run() {
-        System.out.println("Кошка по имени " +  getName() + " быстро бегает");
+
     }
 }

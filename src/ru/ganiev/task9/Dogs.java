@@ -1,13 +1,18 @@
 package ru.ganiev.task9;
 
-abstract class Dogs extends Animal implements Run {
+public class Dogs extends Animal implements Run {
+
+    String name;
+    int age;
 
     public Dogs(String name, int age) {
-        super(name, age);
+        this.name = name;
+        this.age = age;
     }
 
+    @Override
     public String getName() {
-        return getName();
+        return name;
     }
 
     public void setName(String model) {
@@ -15,11 +20,15 @@ abstract class Dogs extends Animal implements Run {
     }
 
     public int getAge() {
-        return getAge();
+        return this.age;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
+    @Override
+    public void run() {
+        System.out.println("Собака по имени " + getName() + " бегает");
+    }
 }

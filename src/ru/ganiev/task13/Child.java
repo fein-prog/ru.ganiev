@@ -1,19 +1,23 @@
 package ru.ganiev.task13;
 
-public class Child {
-    public void eats (String s) {
-        try {
-            if ("морковь".equals(s)) {
-                System.out.println("съел морковь за обе щеки");
-            }
-            if ("яблоко".equals(s)) {
-                System.out.println("съел яблоко за обе щеки");
-            }
-            if ("каша".equals(s)){
+import ru.ganiev.task13.Food;
 
+public class Child {
+
+    private static final Food[] favoriteFoods = new Food[]{Food.CARROT, Food.APPLE};
+
+    public void eats (String food) {
+        try {
+            for(Food favoriteFood : favoriteFoods) {
+                if (favoriteFood.getName().equals(food)) {
+                    System.out.printf("съел %s за обе щеки\n", food);
+                }
+            }
+            if (Food.PORRIDGE.getName().equals(food)) {
+                throw new Exception("невкусная еда");
             }
         } catch (Exception e) {
-            System.out.println("невкусная еда");
+            System.out.println(e.getMessage());
         } finally {
             System.out.println("Cпасибо, мама");
         }

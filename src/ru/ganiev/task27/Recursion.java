@@ -3,23 +3,24 @@ package ru.ganiev.task27;
 import java.util.Scanner;
 
 public class Recursion {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         System.out.println("Введите номер числа Фибоначчи:");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
-    System.out.println("Число Фибоначчи: " + GetNFibonacci(n));
-
+        for (int i = 0; i < n; i++) {
+            System.out.print(f(i) + ", ");
+        }
     }
 
-    private static int GetNFibonacci(int n) {
-        if (n>1)
-            return GetNFibonacci(n-2) + GetNFibonacci(n-1); // формула Фибоначчи
-        else
-        if (n==1)
+    private static int f(int n) {
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
             return 1;
-        else
-            return 0; // если n==0
+        } else {
+            return f(n - 1) + f(n - 2);
+        }
     }
 }

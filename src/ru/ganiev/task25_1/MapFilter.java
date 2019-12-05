@@ -11,6 +11,7 @@ public class MapFilter {
         map.put("Виктор", "Сидоров");
         map.put("Сергей", "Савельев");
         map.put("Вадим", "Викторов");
+        map.put("Максим", "Викторов");
 
         System.out.println(map);
         System.out.println("Словарь пустой? " + map.isEmpty());
@@ -22,9 +23,7 @@ public class MapFilter {
         for (String v : map.values()) {
             if (Collections.frequency(map.values(), v) > 1)
                 return false;
-            else
-                return true;
         }
-        return false;
+        return true;
     }
 }

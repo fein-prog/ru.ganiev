@@ -7,12 +7,9 @@ public class Reverse {
         for (int i = 0; i < n; i++) {
             arr[i] = i;
         }
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
         return arr;
     }
-
+//todo добавить метод printArray
     private static void reverse(int[] arr) {
         for (int i = 0; i < arr.length / 2; i++) {
             int tmp = arr[arr.length - i - 1];
@@ -20,8 +17,8 @@ public class Reverse {
             arr[i] = tmp;
         }
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int value : arr) {
+            System.out.print(value + " ");
         }
     }
 

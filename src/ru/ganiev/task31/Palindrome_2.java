@@ -8,17 +8,14 @@ public class Palindrome_2 {
         Scanner scan = new Scanner(System.in);
         String s = scan.next();
 
-        for (int i = 0; i < 1 ; i++) {
-            if (palindrome(s))
+        if (palindrome(s))
                 System.out.println("Это палиндром");
-            else
+        else
                 System.out.println("Это не палиндром");
-        }
+
     }
 
     private static boolean palindrome(String text) {
-        if (text.length() == 1)
-            return true;
         for (int i = 0; i < text.length() / 2; i++) {
             if (text.charAt(i) != text.charAt(text.length() - i - 1))
                 return false;

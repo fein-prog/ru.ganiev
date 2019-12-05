@@ -2,7 +2,6 @@ package ru.ganiev.task24;
 
 
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 public class Filter {
@@ -19,18 +18,18 @@ public class Filter {
 
         System.out.println(strings);
 
-        removeEvenLength(strings) ;
-        System.out.println(strings);
+        Set<String> filtered = removeEvenLength(strings);
+        System.out.println(filtered);
     }
 
-    public static Set<String> removeEvenLength(Set<String> set){
-        for (Iterator<String> iterator = set.iterator(); iterator.hasNext();) {
-            String s =  iterator.next();
-            if (s.length() % 2 == 0) {
-                iterator.remove();
+    private static Set<String> removeEvenLength(Set<String> set) {
+        Set<String> strings = new HashSet<>();
+        for (String s : set) {
+            if (s.length() % 2 == 1) {
+                strings.add(s);
             }
         }
-        return set;
+        return strings;
     }
 
 }

@@ -12,20 +12,13 @@ public class MapFilter {
         map.put("Сергей", "Савельев");
         map.put("Вадим", "Викторов");
 
-//        map.put("Вася", "Иванов");
-//        map.put("Петр", "Петров");
-//        map.put("Виктор", "Иванов");
-//        map.put("Сергей", "Савельев");
-//        map.put("Вадим", "Петров");
-
         System.out.println(map);
-//        for (Map.Entry<String, String> entry : map.entrySet()) {
-//            System.out.println(entry.getKey() + ": " + entry.getValue());
-//        }
         System.out.println("Словарь пустой? " + map.isEmpty());
 
+        System.out.println("Нет одинаковых значений? " + isUnique(map));
     }
-    public boolean isUnique(Map<String, String> map) {
+
+    private static boolean isUnique(Map<String, String> map) {
         for (String v : map.values()) {
             if (Collections.frequency(map.values(), v) > 1)
                 return false;
